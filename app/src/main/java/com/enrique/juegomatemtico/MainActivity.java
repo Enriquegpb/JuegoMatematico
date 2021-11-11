@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnramdon,btnresult;
     int numero;
     RadioButton rd1,rd2,rd3,rd4,rd5;
+    int divisor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +45,14 @@ public class MainActivity extends AppCompatActivity {
                 if (rd5.isChecked())rd5.getText();
                 if (!rd1.isChecked() && !rd2.isChecked()&& !rd3.isChecked()&&!rd4.isChecked()&&! rd5.isChecked())
                     Toast.makeText(getApplicationContext(),"No has seleccionado ninguna opc",Toast.LENGTH_LONG).show();
+
+                if (calcular_divisivilidad(numero,divisor))
+                    Toast.makeText(getApplicationContext(),"El numero es divisible entre las opciones que has indicado",Toast.LENGTH_LONG).show();
             }
         });
     }
-    public void calcular_divisivilidad(int a){
+    public boolean calcular_divisivilidad(int a,int divisor){
+        if (a%divisor==0 && a%divisor==0 && a%divisor==0 && a%divisor==0) return true;
+        else return  false;
     }
 }
