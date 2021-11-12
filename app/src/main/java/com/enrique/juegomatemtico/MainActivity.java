@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     TextView tv;
     Button btnramdon, btnresult;
-    int numero,divisor,cnt;
+    int numero,divisor1,divisor2,divisor3,divisor4,cnt;
     RadioButton rd1, rd2, rd3, rd4, rd5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +38,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (rd1.isChecked()){
-                    rd1.getText();
+                    divisor1=Integer.parseInt((String)rd1.getText());
                     cnt++;
                 }
                 if (rd2.isChecked()){
-                    rd2.getText();
+                    divisor2=Integer.parseInt((String)rd2.getText());
                     cnt++;
                 }
                 if (rd3.isChecked()){
-                    rd3.getText();
+                    divisor3=Integer.parseInt((String)rd3.getText());
                     cnt++;
                 }
                 if (rd4.isChecked()){
-                    rd4.getText();
+                    divisor4=Integer.parseInt((String)rd4.getText());
                     cnt++;
                 }
                 if (rd5.isChecked()){
@@ -60,10 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!rd1.isChecked() && !rd2.isChecked() && !rd3.isChecked() && !rd4.isChecked() && !rd5.isChecked())
                     Toast.makeText(getApplicationContext(), "No has seleccionado ninguna opc", Toast.LENGTH_LONG).show();
+
+                    tv.setText("Error");
+            }
         });
-    }
-
-    public boolean calcular_divisivilidad(int a, int divisor) {
-
     }
 }

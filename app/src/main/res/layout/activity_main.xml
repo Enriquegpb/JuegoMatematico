@@ -10,9 +10,11 @@
         android:id="@+id/btnrandom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="525dp"
         android:text="NºAleatorio"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,17 +22,18 @@
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="11dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/pregunta"
-        app:layout_constraintStart_toStartOf="@+id/btnrandom" />
+        app:layout_constraintStart_toStartOf="@+id/btnrandom"
+        app:layout_constraintTop_toBottomOf="@+id/btnrandom" />
 
     <TextView
         android:id="@+id/tvr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="89dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="246dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -39,32 +42,33 @@
         android:id="@+id/btnresultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="78dp"
+        android:layout_marginStart="55dp"
         android:text="resultado"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvr"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/pregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="39dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="42dp"
         android:text="¿Entree qué numeros es divisible este numero?"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="236dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="220dp"
+        android:layout_width="326dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="87dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginBottom="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/pregunta"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/tv">
 
         <RadioButton
             android:id="@+id/rd1"
@@ -96,5 +100,16 @@
             android:layout_height="wrap_content"
             android:text="No es divisible entre ninguno de estos cuatro números" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="123dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnrandom"
+        app:srcCompat="@drawable/ok" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
