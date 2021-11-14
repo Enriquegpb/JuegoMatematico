@@ -12,9 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="117dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="525dp"
         android:text="NºAleatorio"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,11 +30,11 @@
         android:id="@+id/tvr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="246dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rd5" />
 
     <Button
         android:id="@+id/btnresultado"
@@ -51,65 +49,67 @@
         android:id="@+id/pregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="13dp"
         android:text="¿Entree qué numeros es divisible este numero?"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/rd1"
+        app:layout_constraintStart_toStartOf="@+id/rd1" />
+
+
+    <RadioButton
+        android:id="@+id/rd1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="149dp"
+        android:text="2"
+        app:layout_constraintEnd_toEndOf="@+id/rd2"
+        app:layout_constraintStart_toStartOf="@+id/rd2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rd2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/rd3"
+        app:layout_constraintStart_toStartOf="@+id/rd3"
+        app:layout_constraintTop_toBottomOf="@+id/rd1" />
+
+    <RadioButton
+        android:id="@+id/rd3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="@+id/rd4"
+        app:layout_constraintStart_toStartOf="@+id/rd4"
+        app:layout_constraintTop_toBottomOf="@+id/rd2" />
+
+    <RadioButton
+        android:id="@+id/rd4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="@+id/rd5"
+        app:layout_constraintStart_toStartOf="@+id/rd5"
+        app:layout_constraintTop_toBottomOf="@+id/rd3" />
+
+    <RadioButton
+        android:id="@+id/rd5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="No es divisible entre ninguno de estos cuatro números"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="326dp"
-        android:layout_height="238dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="85dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tv">
-
-        <RadioButton
-            android:id="@+id/rd1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2" />
-
-        <RadioButton
-            android:id="@+id/rd2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="3" />
-
-        <RadioButton
-            android:id="@+id/rd3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="5" />
-
-        <RadioButton
-            android:id="@+id/rd4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="10" />
-
-        <RadioButton
-            android:id="@+id/rd5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="No es divisible entre ninguno de estos cuatro números" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@+id/rd4" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="123dp"
-        android:layout_height="0dp"
+        android:layout_height="106dp"
         android:layout_marginStart="131dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnrandom"
         app:srcCompat="@drawable/ok" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
