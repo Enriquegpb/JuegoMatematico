@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "No has seleccionado ninguna opcion", Toast.LENGTH_LONG).show();
 
                 if (rd5.isChecked())
-                    if(!calcular_divisivilidad2(numero,2)==true&&
-                !calcular_divisivilidad3(numero,3)==true&&
-                !calcular_divisivilidad5(numero,5)==true&&
-                 !calcular_divisivilidad10(numero,10)==true)
+                    if(!calcular_divisivilidad2(numero, 2) &&
+                            !calcular_divisivilidad3(numero, 3) &&
+                            !calcular_divisivilidad5(numero, 5) &&
+                            !calcular_divisivilidad10(numero, 10))
                 {
                     tvr.setText("Correcto");
                     Iv.setImageResource(R.drawable.ok);
@@ -100,6 +100,105 @@ public class MainActivity extends AppCompatActivity {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
                 }
+                //Una de las opciones
+                if (rd1.isChecked()&&rd2.isChecked()&& calcular_divisivilidad2(numero,2)
+                && calcular_divisivilidad3(numero,3)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd1.isChecked()&&rd3.isChecked()&& calcular_divisivilidad2(numero,2)
+                && calcular_divisivilidad5(numero,5)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd1.isChecked()&&rd4.isChecked()&& calcular_divisivilidad2(numero,2)
+                && calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd2.isChecked()&&rd3.isChecked()&& calcular_divisivilidad3(numero,3)
+                && calcular_divisivilidad5(numero,5)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd2.isChecked()&&rd4.isChecked()&& calcular_divisivilidad3(numero,3)
+                && calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad5(numero,5)
+                && calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                //dos de las opciones
+                if (rd1.isChecked()&&rd2.isChecked()&&rd3.isChecked()&& calcular_divisivilidad2(numero,2)
+                        && calcular_divisivilidad3(numero,3)
+                        &&calcular_divisivilidad5(numero,5)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd2.isChecked()&&rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad3(numero,3)
+                        && calcular_divisivilidad5(numero,5)
+                        &&calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd3.isChecked()&&rd4.isChecked()&&rd1.isChecked()&& calcular_divisivilidad5(numero,5)
+                        && calcular_divisivilidad10(numero,10)
+                        &&calcular_divisivilidad2(numero,2)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd4.isChecked()&&rd1.isChecked()&&rd2.isChecked()&& calcular_divisivilidad10(numero,10)
+                        && calcular_divisivilidad2(numero,2)
+                        &&calcular_divisivilidad3(numero,3)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                //tres opciones
+                if (rd1.isChecked()&&rd2.isChecked()&&rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad2(numero,10)
+                        && calcular_divisivilidad3(numero,2)
+                        &&calcular_divisivilidad5(numero,3)
+                && calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageResource(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                //todas las opciones
+
         }
             });
     }
