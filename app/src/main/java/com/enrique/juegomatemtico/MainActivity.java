@@ -71,6 +71,36 @@ public class MainActivity extends AppCompatActivity {
                     tvr.setText("Incorrecto");
                     Iv.setImageResource(R.drawable.nok);
                 }
+
+                if (rd1.isChecked()&& calcular_divisivilidad2(numero,2)){
+                    Iv.setImageDrawable(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageDrawable(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd2.isChecked()&& calcular_divisivilidad2(numero,3)){
+                    Iv.setImageDrawable(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageDrawable(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd3.isChecked()&& calcular_divisivilidad2(numero,5)){
+                    Iv.setImageDrawable(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageDrawable(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+                if (rd4.isChecked()&& calcular_divisivilidad2(numero,10)){
+                    Iv.setImageDrawable(R.drawable.ok);
+                    tvr.setText("Correcto");
+                }else {
+                    Iv.setImageDrawable(R.drawable.nok);
+                    tvr.setText("Incorrecto");
+                }
+
         }
             });
     }
