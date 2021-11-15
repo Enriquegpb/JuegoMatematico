@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
     int numero;
     RadioButton rd1, rd2, rd3, rd4, rd5;
     ImageView Iv;
-    Boolean a,b,c,d;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +44,20 @@ public class MainActivity extends AppCompatActivity {
                 if (!rd1.isChecked() && !rd2.isChecked() && !rd3.isChecked() && !rd4.isChecked() && !rd5.isChecked())
                     Toast.makeText(getApplicationContext(), "No has seleccionado ninguna opcion", Toast.LENGTH_LONG).show();
 
+                if (rd5.isChecked())
+                    if(!calcular_divisivilidad2(numero,2)==true&&
+                !calcular_divisivilidad3(numero,3)==true&&
+                !calcular_divisivilidad5(numero,5)==true&&
+                 !calcular_divisivilidad10(numero,10)==true)
+                {
+                    tvr.setText("Correcto");
+                    Iv.setImageResource(R.drawable.ok);
+                }
+
+                else{
+                    tvr.setText("Incorrecto");
+                    Iv.setImageResource(R.drawable.nok);
+                }
                 if (rd5.isChecked()&& !(calcular_divisivilidad2(numero,2)&&
                 calcular_divisivilidad10(numero,3)&&
                 calcular_divisivilidad5(numero,5)&&
@@ -58,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
                     tvr.setText("Incorrecto");
                     Iv.setImageResource(R.drawable.nok);
                 }
-
         }
             });
     }
