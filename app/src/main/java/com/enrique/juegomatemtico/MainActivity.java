@@ -44,20 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 if (!rd1.isChecked() && !rd2.isChecked() && !rd3.isChecked() && !rd4.isChecked() && !rd5.isChecked())
                     Toast.makeText(getApplicationContext(), "No has seleccionado ninguna opcion", Toast.LENGTH_LONG).show();
 
-                if (rd5.isChecked())
-                    if(!calcular_divisivilidad2(numero, 2) &&
-                            !calcular_divisivilidad3(numero, 3) &&
-                            !calcular_divisivilidad5(numero, 5) &&
-                            !calcular_divisivilidad10(numero, 10))
-                {
-                    tvr.setText("Correcto");
-                    Iv.setImageResource(R.drawable.ok);
-                }
-
-                else{
-                    tvr.setText("Incorrecto");
-                    Iv.setImageResource(R.drawable.nok);
-                }
                 if (rd5.isChecked()&& !(calcular_divisivilidad2(numero,2)&&
                 calcular_divisivilidad10(numero,3)&&
                 calcular_divisivilidad5(numero,5)&&
@@ -65,89 +51,123 @@ public class MainActivity extends AppCompatActivity {
                 ){
                     tvr.setText("Correcto");
                     Iv.setImageResource(R.drawable.ok);
+                    rd5.setChecked(false);
                 }
 
                 else{
                     tvr.setText("Incorrecto");
                     Iv.setImageResource(R.drawable.nok);
+                    rd5.setChecked(false);
                 }
 
                 if (rd1.isChecked()&& calcular_divisivilidad2(numero,2)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd1.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd1.setChecked(false);
                 }
                 if (rd2.isChecked()&& calcular_divisivilidad3(numero,3)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd2.setChecked(false);
                 }
                 if (rd3.isChecked()&& calcular_divisivilidad5(numero,5)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd3.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd3.setChecked(false);
                 }
                 if (rd4.isChecked()&& calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd4.setChecked(false);
                 }
                 //Una de las opciones
                 if (rd1.isChecked()&&rd2.isChecked()&& calcular_divisivilidad2(numero,2)
                 && calcular_divisivilidad3(numero,3)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
                 }
                 if (rd1.isChecked()&&rd3.isChecked()&& calcular_divisivilidad2(numero,2)
                 && calcular_divisivilidad5(numero,5)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }
                 if (rd1.isChecked()&&rd4.isChecked()&& calcular_divisivilidad2(numero,2)
                 && calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd1.setChecked(false);
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd1.setChecked(false);
+                    rd4.setChecked(false);
                 }
                 if (rd2.isChecked()&&rd3.isChecked()&& calcular_divisivilidad3(numero,3)
                 && calcular_divisivilidad5(numero,5)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }
                 if (rd2.isChecked()&&rd4.isChecked()&& calcular_divisivilidad3(numero,3)
                 && calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd2.setChecked(false);
+                    rd4.setChecked(false);
                 }
                 if (rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad5(numero,5)
                 && calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
                 }
                 //dos de las opciones
                 if (rd1.isChecked()&&rd2.isChecked()&&rd3.isChecked()&& calcular_divisivilidad2(numero,2)
@@ -155,36 +175,60 @@ public class MainActivity extends AppCompatActivity {
                         &&calcular_divisivilidad5(numero,5)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
                 }
                 if (rd2.isChecked()&&rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad3(numero,3)
                         && calcular_divisivilidad5(numero,5)
                         &&calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd2.setChecked(false);
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
                 }
                 if (rd3.isChecked()&&rd4.isChecked()&&rd1.isChecked()&& calcular_divisivilidad5(numero,5)
                         && calcular_divisivilidad10(numero,10)
                         &&calcular_divisivilidad2(numero,2)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
+                    rd1.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
+                    rd1.setChecked(false);
                 }
                 if (rd4.isChecked()&&rd1.isChecked()&&rd2.isChecked()&& calcular_divisivilidad10(numero,10)
                         && calcular_divisivilidad2(numero,2)
                         &&calcular_divisivilidad3(numero,3)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd4.setChecked(false);
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
+                    rd4.setChecked(false);
+                    rd1.setChecked(false);
+                    rd2.setChecked(false);
                 }
                 //tres opciones
                 if (rd1.isChecked()&&rd2.isChecked()&&rd3.isChecked()&&rd4.isChecked()&& calcular_divisivilidad2(numero,10)
@@ -193,6 +237,10 @@ public class MainActivity extends AppCompatActivity {
                 && calcular_divisivilidad10(numero,10)){
                     Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
+                    rd2.setChecked(false);
+                    rd1.setChecked(false);
+                    rd3.setChecked(false);
+                    rd4.setChecked(false);
                 }else {
                     Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
