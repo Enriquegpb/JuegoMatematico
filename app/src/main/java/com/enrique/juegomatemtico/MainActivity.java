@@ -73,34 +73,33 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 if (rd1.isChecked()&& calcular_divisivilidad2(numero,2)){
-                    Iv.setImageDrawable(R.drawable.ok);
+                    Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
                 }else {
-                    Iv.setImageDrawable(R.drawable.nok);
+                    Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
                 }
-                if (rd2.isChecked()&& calcular_divisivilidad2(numero,3)){
-                    Iv.setImageDrawable(R.drawable.ok);
+                if (rd2.isChecked()&& calcular_divisivilidad3(numero,3)){
+                    Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
                 }else {
-                    Iv.setImageDrawable(R.drawable.nok);
+                    Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
                 }
-                if (rd3.isChecked()&& calcular_divisivilidad2(numero,5)){
-                    Iv.setImageDrawable(R.drawable.ok);
+                if (rd3.isChecked()&& calcular_divisivilidad5(numero,5)){
+                    Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
                 }else {
-                    Iv.setImageDrawable(R.drawable.nok);
+                    Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
                 }
-                if (rd4.isChecked()&& calcular_divisivilidad2(numero,10)){
-                    Iv.setImageDrawable(R.drawable.ok);
+                if (rd4.isChecked()&& calcular_divisivilidad10(numero,10)){
+                    Iv.setImageResource(R.drawable.ok);
                     tvr.setText("Correcto");
                 }else {
-                    Iv.setImageDrawable(R.drawable.nok);
+                    Iv.setImageResource(R.drawable.nok);
                     tvr.setText("Incorrecto");
                 }
-
         }
             });
     }
