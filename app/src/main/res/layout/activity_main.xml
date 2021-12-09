@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginBottom="13dp"
-        android:text="¿Entree qué numeros es divisible este numero?"
+        android:text="¿Entre qué numeros es divisible este numero?"
         app:layout_constraintBottom_toTopOf="@+id/rd1"
         app:layout_constraintStart_toStartOf="@+id/rd1" />
 
