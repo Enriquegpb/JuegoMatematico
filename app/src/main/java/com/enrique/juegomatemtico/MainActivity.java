@@ -59,12 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (fcontadorsoluciones()==4){
                     tvr.setText("Correcto");
                     Iv.setImageResource(R.drawable.ok);
-                }else{
-                    tvr.setText("Incorrecto");
-                    Iv.setImageResource(R.drawable.nok);
-                }
-
-                if (rd5.isChecked()&& fcontadorsoluciones()==0){
+                }else if (fcontadorsoluciones()==5){
                     tvr.setText("Correcto");
                     Iv.setImageResource(R.drawable.ok);
                 }else{
@@ -96,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
             cnt++;
         if (rd4.isChecked()&& calcular_divisivilidad10(numero,10))
             cnt++;
+        if (rd5.isChecked()&& cnt==0)
+            cnt=5;
         return cnt;
     }
 }
