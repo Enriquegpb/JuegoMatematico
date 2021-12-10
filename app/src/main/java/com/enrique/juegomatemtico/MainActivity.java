@@ -69,30 +69,35 @@ public class MainActivity extends AppCompatActivity {
         }
             });
     }
-    public boolean calcular_divisivilidad2(int numero,int divisores){
+    public boolean calcular_divisivilidad(int numero,int divisores){
         return numero % divisores == 0;
     }
-    public boolean calcular_divisivilidad3(int numero,int divisores){
-        return numero % divisores == 0;
-    }
-    public boolean calcular_divisivilidad5(int numero,int divisores){
-        return numero % divisores == 0;
-    }
-    public boolean calcular_divisivilidad10(int numero,int divisores){
-        return numero % divisores == 0;
-    }
-    public int fcontadorsoluciones(){
-        int cnt=0;
-        if(rd1.isChecked() && calcular_divisivilidad2(numero, 2))
+
+    public int fcontadorsoluciones() {
+        int cnt = 0;
+        if (rd1.isChecked() && calcular_divisivilidad(numero, 2)) {
             cnt++;
-        if (rd2.isChecked()&& calcular_divisivilidad3(numero,3))
+            if (!calcular_divisivilidad(numero, 2))
+                cnt--;
+        }
+        if (rd2.isChecked() && calcular_divisivilidad(numero, 3)) {
             cnt++;
-        if (rd3.isChecked()&& calcular_divisivilidad5(numero,5))
+            if (!calcular_divisivilidad(numero, 3))
+                cnt--;
+        }
+        if (rd3.isChecked() && calcular_divisivilidad(numero, 5)) {
             cnt++;
-        if (rd4.isChecked()&& calcular_divisivilidad10(numero,10))
-            cnt++;
-        if (rd5.isChecked()&& cnt==0)
-            cnt=5;
-        return cnt;
-    }
-}
+            if (!calcular_divisivilidad(numero, 5))
+                cnt--;
+        }
+            if (rd4.isChecked() && calcular_divisivilidad(numero, 10)) {
+                cnt++;
+                if (!calcular_divisivilidad(numero, 10))
+                    cnt--;
+            }
+            if (rd5.isChecked() && cnt == 0)
+                cnt = 5;
+            return cnt;
+
+
+    }}
